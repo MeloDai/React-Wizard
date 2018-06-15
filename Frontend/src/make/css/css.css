@@ -1,0 +1,224 @@
+html{
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.md-wizard-background{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.md-wizard{
+    position: absolute;
+    min-width: 800px;
+    min-height: 600px;
+    background: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.md-wizard-title{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 36px;
+}
+
+.md-wizard-step-container-left{
+    position: absolute;
+    left: 0;
+    top: 60px;
+    bottom: 5px;
+    width: 130px;
+    padding: 0 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.md-wizard-step-container-top{
+    position: absolute;
+    left: 5px;
+    top: 60px;
+    right: 5px;
+    height: 100px;
+    padding: 5px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.md-wizard-step-stepper-left{
+    margin-bottom: 10px;
+}
+
+.md-wizard-step-stepper-top{
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.md-wizard-step-stepper-size{
+    width: 120px;
+    height: 90px;
+    line-height: 90px;
+}
+
+.md-wizard-body-name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: 23px;
+}
+
+.md-wizard-body-content{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.md-wizard-body-container-left{
+    left: 145px;
+    top: 60px;
+    bottom: 50px;
+    right: 5px;
+    position: absolute;
+}
+
+.md-wizard-body-container-top{
+    left: 5px;
+    top: 175px;
+    bottom: 50px;
+    right: 5px;
+    position: absolute;
+}
+
+.md-wizard-body-container-none{
+    left: 5px;
+    top: 60px;
+    bottom: 50px;
+    right: 5px;
+    position: absolute;
+}
+
+.md-wizard-controller-left{
+    position: absolute;
+    left: 145px;
+    right: 5px;
+    bottom: 5px;
+}
+
+.md-wizard-controller-top{
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+}
+
+.md-wizard-controller-none{
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+}
+
+.box-shadow-1{
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.display-none{
+    display: none!important;
+}
+
+.float-right{
+    float: right;
+}
+
+.margin-left-15{
+    margin-left: 15px!important;
+}
+
+.padding-left-5{
+    padding-left: 5px!important;
+}
+
+.padding-6-0{
+    padding-top: 6px!important;
+    padding-bottom: 6px!important;
+}
+
+.padding-right-5{
+    padding-right: 5px!important;
+}
+
+.color-white{
+    color: #fff;
+}
+
+.color-black{
+    color: #000000;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.text-overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.background-focus{
+    background: #09aeef;
+}
+
+.background-passed{
+    background: #e0e0e0;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.absolute-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}

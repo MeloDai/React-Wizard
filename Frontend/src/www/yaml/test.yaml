@@ -1,0 +1,34 @@
+Wizard:
+  title: this is the master title of whole wizard
+  steperModel: left
+  slides:
+    -
+      name: slide 1
+      title: title of slide 1
+    -
+      name: slide 2
+      title: title of slide 2
+    -
+      name: slide 3
+      title: title of slide 3
+    -
+      name: slide 4
+      title: title of slide 4
+    -
+      name: slide 5
+      title: title of slide 5
+    -
+      name: slide 6
+      title: title of slide 6
+    -
+      name: slide 7
+      title: title of slide 7
+    -
+      name: slide 8
+      title: title of slide 8
+    -
+      name: slide 9
+      title: title of slide 9
+    -
+      name: slide 10
+      title: title of slide 10
