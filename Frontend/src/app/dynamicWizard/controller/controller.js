@@ -26,6 +26,9 @@ export default class WizardController extends Component{
                 <Button
                     variant="contained"
                     color="default"
+                    onClick={()=>{
+                        fun.setDisplay(false);
+                    }}
                 >
                     Cancel
                 </Button>

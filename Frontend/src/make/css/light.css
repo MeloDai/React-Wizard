@@ -1,0 +1,31 @@
+.left-menu-container{
+    background: #f2f2f2;
+}
+
+.header-container{
+    background: #09aeef;
+}
+
+.header-container svg{
+    fill: #fff;
+}
+
+.header-button:hover{
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.body-container{
+    background-color: #ffffff;
+}
+
+.compose-btn{
+    background-color: #DB4437;
+}
+
+.compose-btn > svg{
+    fill: #ffffff;
+}
+
+.md-wizard-background{
+    background-color: rgba(0, 0, 0, 0.5);
+}

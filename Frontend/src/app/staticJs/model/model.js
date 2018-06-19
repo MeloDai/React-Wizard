@@ -1,6 +1,8 @@
 let model = {
     Wizard:null,
-    fun:{}
+    fun:{
+        leftMenu:{}
+    }
 };
 
 export default model;

@@ -2,6 +2,107 @@ html{
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
+.header-container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    z-index: 1;
+}
+
+.left-menu-container{
+    position: absolute;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    width: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-transition: width 250ms ease-out,-webkit-transform 250ms ease-out;
+    transition: width 250ms ease-out,-webkit-transform 250ms ease-out;
+    transition: width 250ms ease-out,transform 250ms ease-out;
+    transition: width 250ms ease-out,transform 250ms ease-out,-webkit-transform 250ms ease-out;
+}
+
+.body-container{
+    position: absolute;
+    left: 250px;
+    top: 60px;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    -webkit-transition: left 250ms ease-out,-webkit-transform 250ms ease-out;
+    transition: left 250ms ease-out,-webkit-transform 250ms ease-out;
+    transition: left 250ms ease-out,transform 250ms ease-out;
+    transition: left 250ms ease-out,transform 250ms ease-out,-webkit-transform 250ms ease-out;
+}
+
+.header-left-icon{
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.compose-btn-container{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    z-index: 1;
+}
+
+.compose-btn {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,.25);
+}
+
+.compose-btn-icon {
+    transition: all .2s!important;
+}
+
+.compose-btn-icon-plus {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.compose-btn-container.is-active .compose-btn-icon-plus {
+    opacity: 0;
+    -webkit-transform: rotate(13deg);
+    transform: rotate(130deg);
+}
+.compose-btn-icon-create {
+    opacity: 0;
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+.compose-btn-container.is-active .compose-btn-icon-create {
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.header-button{
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+.header-right-style-switch{
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+.header-button > svg{
+    font-size: 30px;
+}
+
 .md-wizard-background{
     position: fixed;
     left: 0;
@@ -197,6 +298,23 @@ html{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.absolute-center-no-transform{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.width-0{
+    width: 0!important;
+}
+
+.left-0{
+    left: 0!important;
 }
 
 ::-webkit-scrollbar {

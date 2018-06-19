@@ -25,6 +25,23 @@ let staticFun = {
                 });
             }
         }
+    },
+    style:{
+        switchCss:(fileName)=>{
+            let localLinks = document.getElementsByTagName("link");
+            for (let i = 0; i < localLinks.length; i++) {
+                if (localLinks.item(i).hasAttributes("href")) {
+                    let currentFile = localLinks.item(i).getAttribute("href");
+                    if (currentFile && (currentFile.includes("light.css") || currentFile.includes("dark.css"))) {
+                        localLinks.item(i).setAttribute("href", currentFile
+                            .split('light.css').join(fileName)
+                            .split('dark.css').join(fileName)
+                        );
+                        break;
+                    }
+                }
+            }
+        }
     }
 };
 
