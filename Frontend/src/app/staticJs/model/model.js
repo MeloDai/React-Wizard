@@ -1,7 +1,9 @@
 let model = {
     Wizard:null,
     fun:{
-        leftMenu:{}
+        leftMenu:{
+            nestedFun:{}
+        }
     }
 };
 

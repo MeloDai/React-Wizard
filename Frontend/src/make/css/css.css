@@ -19,10 +19,21 @@ html{
     width: 250px;
     overflow-x: hidden;
     overflow-y: auto;
-    -webkit-transition: width 250ms ease-out,-webkit-transform 250ms ease-out;
-    transition: width 250ms ease-out,-webkit-transform 250ms ease-out;
-    transition: width 250ms ease-out,transform 250ms ease-out;
-    transition: width 250ms ease-out,transform 250ms ease-out,-webkit-transform 250ms ease-out;
+    -webkit-transition: left 250ms ease-out,-webkit-transform 250ms ease-out;
+    transition: left 250ms ease-out,-webkit-transform 250ms ease-out;
+    transition: left 250ms ease-out,transform 250ms ease-out;
+    transition: left 250ms ease-out,transform 250ms ease-out,-webkit-transform 250ms ease-out;
+}
+
+.left-menu-item-label > span{
+    width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.left-menu-nested > div{
+    padding-left: 36px;
 }
 
 .body-container{
@@ -310,6 +321,14 @@ html{
 
 .left-0{
     left: 0!important;
+}
+
+.left--250{
+    left: -250px!important;
+}
+
+.width-130{
+    width: 130px;
 }
 
 .line-height-36{

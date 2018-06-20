@@ -1,30 +1,10 @@
 import React, {Component} from "react";
-import SvgIcon from '@material-ui/core/SvgIcon';
 import DWJson from "../../staticJs/setting";
+import CustomSvgIcon from "../../customSvgIcon/customSvgIcon";
 
 const {theme} = DWJson.utilities;
 const {css} = theme;
 const {switchCss} = DWJson.staticFun.style;
-
-function LightStyleIcon(props) {
-    return(
-        <SvgIcon {...props}>
-            <path
-                d={theme.svg.light}
-            />
-        </SvgIcon>
-    );
-}
-
-function DarkStyleIcon(props) {
-    return(
-        <SvgIcon {...props}>
-            <path
-                d={theme.svg.dark}
-            />
-        </SvgIcon>
-    );
-}
 
 export default class StyleSwitch extends Component{
     constructor(props){
@@ -66,10 +46,18 @@ export default class StyleSwitch extends Component{
             >
                 {
                     icon === css.light.label ?
-                        <LightStyleIcon/>
+                        <CustomSvgIcon
+                            svgProps={{
+                                path:theme.svg.light
+                            }}
+                        />
                         :
                         icon === css.dark.label ?
-                            <DarkStyleIcon/>
+                            <CustomSvgIcon
+                                svgProps={{
+                                    path:theme.svg.dark
+                                }}
+                            />
                             :
                             null
                 }

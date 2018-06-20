@@ -1,6 +1,6 @@
 Wizard:
   title: this is the master title of whole wizard
-  stepperModel: top
+  stepperModel: left
   slides:
     -
       name: slide 1

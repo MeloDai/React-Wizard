@@ -1,28 +1,8 @@
 import React, {Component} from "react";
-import SvgIcon from '@material-ui/core/SvgIcon';
 import DWJson from "../staticJs/setting";
+import CustomSvgIcon from "../customSvgIcon/customSvgIcon";
 
 const {btn} = DWJson.utilities.composeBtn;
-
-function PlusIcon(props) {
-    return(
-        <SvgIcon {...props}>
-            <path
-                d={btn.svg.plus}
-            />
-        </SvgIcon>
-    );
-}
-
-function CreateIcon(props) {
-    return(
-        <SvgIcon {...props}>
-            <path
-                d={btn.svg.create}
-            />
-        </SvgIcon>
-    );
-}
 
 export default class ComposeBtn extends Component{
     constructor(props){
@@ -71,11 +51,17 @@ export default class ComposeBtn extends Component{
                 <div
                     className='compose-btn'
                 >
-                    <PlusIcon
+                    <CustomSvgIcon
                         className='compose-btn-icon compose-btn-icon-plus absolute-center-no-transform'
+                        svgProps={{
+                            path:btn.svg.plus
+                        }}
                     />
-                    <CreateIcon
+                    <CustomSvgIcon
                         className='compose-btn-icon compose-btn-icon-create absolute-center-no-transform'
+                        svgProps={{
+                            path:btn.svg.create
+                        }}
                     />
                 </div>
             </div>

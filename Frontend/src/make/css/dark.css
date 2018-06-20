@@ -70,3 +70,15 @@
 .md-wizard-step-container-left{
     background-color: #333333;
 }
+
+.left-menu-container .left-menu-item-left-svg{
+    fill: #ffffff!important;
+}
+
+.left-menu-container .left-menu-item-label > span{
+    color: #ffffff!important;
+}
+
+.left-menu-nested{
+    background-color: #555555;
+}

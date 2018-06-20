@@ -31,7 +31,7 @@ export default class Wizard extends Component{
                                 stepIndex:1,
                                 stepPassed:init.stepPassed(res.Wizard.slides)
                             });
-                        }, 1000);
+                        }, 600);
                     }
                 })
             }

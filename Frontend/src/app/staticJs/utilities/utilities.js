@@ -21,7 +21,7 @@ let utilities = {
                 className:'left-menu-container'
             },
             hide:{
-                className:'left-menu-container width-0'
+                className:'left-menu-container left--250'
             }
         },
         bodyContainer:{
@@ -50,6 +50,89 @@ let utilities = {
                 }
             }
         }
+    },
+    leftMenu:{
+        nested:{
+            label:'nested'
+        },
+        items:[
+            {
+                label:{
+                    text:'Home'
+                },
+                svg:{
+                    path:'M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z'
+                },
+                children:[
+                    {
+                        label:{
+                            text:'child5'
+                        },
+                        svg:{
+                            path:'M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z'
+                        }
+                    },
+                    {
+                        label:{
+                            text:'child6'
+                        },
+                        svg:{
+                            path:'M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z'
+                        }
+                    },
+                    {
+                        label:{
+                            text:'child7'
+                        },
+                        svg:{
+                            path:'M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z'
+                        }
+                    }
+                ]
+            },
+            {
+                label:{
+                    text:'Mail'
+                },
+                svg:{
+                    path:'M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z'
+                }
+            },
+            {
+                label:{
+                    text:'Account'
+                },
+                svg:{
+                    path:'M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z'
+                },
+                children:[
+                    {
+                        label:{
+                            text:'child1'
+                        },
+                        svg:{
+                            path:'M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z'
+                        }
+                    },
+                    {
+                        label:{
+                            text:'child2'
+                        },
+                        svg:{
+                            path:'M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z'
+                        }
+                    },
+                    {
+                        label:{
+                            text:'child3'
+                        },
+                        svg:{
+                            path:'M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z'
+                        }
+                    }
+                ]
+            }
+        ]
     }
 };
 

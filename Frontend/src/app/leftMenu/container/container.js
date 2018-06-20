@@ -1,8 +1,10 @@
 import React, {Component} from "react";
 import DWJson from "../../staticJs/setting";
+import LeftMenu from "../menu/menu";
 
 const {fun} = DWJson.model;
-const {leftMenuStyle} = DWJson.utilities;
+const {leftMenuStyle, leftMenu} = DWJson.utilities;
+const {items} = leftMenu;
 
 export default class LeftMenuContainer extends Component{
     constructor(props){
@@ -40,7 +42,11 @@ export default class LeftMenuContainer extends Component{
             <div
                 className={containerClass}
             >
-
+                <LeftMenu
+                    leftMenuProps={{
+                        items:items
+                    }}
+                />
             </div>
         );
     }
