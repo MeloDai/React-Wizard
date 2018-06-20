@@ -281,14 +281,6 @@ html{
     white-space: nowrap;
 }
 
-.background-focus{
-    background: #09aeef;
-}
-
-.background-passed{
-    background: #e0e0e0;
-}
-
 .text-align-center{
     text-align: center;
 }

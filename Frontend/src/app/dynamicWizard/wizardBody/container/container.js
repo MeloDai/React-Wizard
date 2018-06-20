@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import WizardBodyName from "../header/name/name";
 import WizardBodyContent from "../content/content";
+import DWJson from "../../../staticJs/setting";
 
 export default class WizardBodyContainer extends Component{
     constructor(props) {
@@ -12,7 +13,8 @@ export default class WizardBodyContainer extends Component{
 
     render(){
         const {wizardProps} = this.props;
-        const wizardBodyContainerClass = "md-wizard-body-container-" +  wizardProps.props.step.container.model;
+        const {Wizard} = DWJson.model;
+        const wizardBodyContainerClass = "md-wizard-body-container-" +  Wizard.stepperModel;
         return(
             <div
                 className={wizardBodyContainerClass}

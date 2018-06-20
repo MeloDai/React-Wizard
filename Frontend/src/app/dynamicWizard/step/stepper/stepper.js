@@ -10,17 +10,16 @@ export default class Stepper extends Component{
     }
 
     render(){
+        const {Wizard} = DWJson.model;
         const {wizardProps, slide, index} = this.props;
         const {stepIndex} = wizardProps.stateProps;
         const backgroundClass = index === stepIndex ? "background-focus " : "background-passed ";
-        const colorClass = index ===stepIndex ? 'color-white ' : 'color-black ';
-        const stepperClass = colorClass +
-                            "text-overflow " +
+        const stepperClass = "text-overflow " +
                             "cursor-pointer " +
                             backgroundClass +
                             "text-align-center " +
                             "md-wizard-step-stepper-size " +
-                            "md-wizard-step-stepper-" +  wizardProps.props.step.container.model;
+                            "md-wizard-step-stepper-" +  Wizard.stepperModel;
 
         const {goToStep} = DWJson.model.fun;
         return(

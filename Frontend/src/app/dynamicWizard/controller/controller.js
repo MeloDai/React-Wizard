@@ -13,10 +13,10 @@ export default class WizardController extends Component{
 
     render(){
         const {wizardProps} = this.props;
-        const {props, stateProps} = wizardProps;
+        const {stateProps} = wizardProps;
         const {stepIndex} = stateProps;
-        const wizardControllerClass = "md-wizard-controller-" + props.step.container.model;
         const {fun, Wizard} = DWJson.model;
+        const wizardControllerClass = "md-wizard-controller-" + Wizard.stepperModel;
         const {goToStep} = fun;
         const {slides} = Wizard;
         return(
@@ -25,7 +25,7 @@ export default class WizardController extends Component{
             >
                 <Button
                     variant="contained"
-                    color="default"
+                    className='cancel-btn'
                     onClick={()=>{
                         fun.setDisplay(false);
                     }}
@@ -41,8 +41,7 @@ export default class WizardController extends Component{
                             :
                             <Button
                                 variant="contained"
-                                color="primary"
-                                className='padding-left-5 padding-6-0'
+                                className='padding-left-5 padding-6-0 primary-btn'
                                 onClick={()=>{
                                     goToStep(stepIndex - 1);
                                 }}
@@ -55,16 +54,14 @@ export default class WizardController extends Component{
                         slides.length === stepIndex ?
                             <Button
                                 variant="contained"
-                                color="primary"
-                                className="margin-left-15"
+                                className="margin-left-15 primary-btn"
                             >
                                 Apply
                             </Button>
                             :
                             <Button
                                 variant="contained"
-                                color="primary"
-                                className="margin-left-15 padding-right-5 padding-6-0"
+                                className="margin-left-15 padding-right-5 padding-6-0 primary-btn"
                                 onClick={()=>{
                                     goToStep(stepIndex + 1);
                                 }}

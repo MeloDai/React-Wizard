@@ -21,66 +21,18 @@ export default class DynamicWizardPage extends Component{
         DWJson.model.fun.setDisplay = this.setDisplay.bind(this);
     }
 
-    componentWillMount(){
-        this.state.wizardProps = {
-            step:{
-                container:{
-                    model:'left'
-                }
-            }
-        };
-    }
-
-    changeModel(model){
-        this.setState({
-            wizardProps:{
-                step:{
-                    container:{
-                        model:model
-                    }
-                }
-            }
-        });
-    }
-
     render(){
-        const {wizardProps, display} = this.state;
+        const {display} = this.state;
 
         if(!display){
             return null;
         }
         return(
-            <div>
-                <div
-                    style={{
-                        zIndex:11,
-                        position:'fixed'
-                    }}
-                >
-                    <button
-                        onClick={()=>this.changeModel('left')}
-                    >
-                        left
-                    </button>
-                    <button
-                        onClick={()=>this.changeModel('top')}
-                    >
-                        top
-                    </button>
-                    <button
-                        onClick={()=>this.changeModel('none')}
-                    >
-                        none
-                    </button>
-                </div>
-                <FrameWork
-                    content={
-                        <Wizard
-                            wizardProps={wizardProps}
-                        />
-                    }
-                />
-            </div>
+            <FrameWork
+                content={
+                    <Wizard/>
+                }
+            />
         );
     }
 }

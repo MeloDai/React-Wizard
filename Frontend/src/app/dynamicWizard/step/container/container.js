@@ -12,9 +12,10 @@ export default class StepContainer extends Component{
 
     render(){
         const {wizardProps} = this.props;
-        const stepContainerClass = "md-wizard-step-container-" +  wizardProps.props.step.container.model;
+        const {Wizard} = DWJson.model;
+        const stepContainerClass = "md-wizard-step-container-" +  Wizard.stepperModel;
 
-        const {slides} =  DWJson.model.Wizard;
+        const {slides} =  Wizard;
 
         return(
             <div

@@ -48,12 +48,10 @@ export default class Wizard extends Component{
     }
 
     render(){
-        const {wizardProps} = this.props;
-
         const {finished, stepIndex} = this.state;
+        const {Wizard} = DWJson.model;
 
-        const wizardSumProps = {
-            props:wizardProps,
+        const wizardProps = {
             stateProps:{
                 stepIndex:stepIndex
             }
@@ -70,18 +68,18 @@ export default class Wizard extends Component{
                         >
                             <WizardTitle/>
                             {
-                                wizardProps.step.container.model === 'none' ?
+                                Wizard.stepperModel === 'none' ?
                                     null
                                     :
                                     <StepContainer
-                                        wizardProps={wizardSumProps}
+                                        wizardProps={wizardProps}
                                     />
                             }
                             <WizardBodyContainer
-                                wizardProps={wizardSumProps}
+                                wizardProps={wizardProps}
                             />
                             <WizardController
-                                wizardProps={wizardSumProps}
+                                wizardProps={wizardProps}
                             />
                         </div>
                         :
