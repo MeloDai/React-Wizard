@@ -12,7 +12,10 @@ export default class Stepper extends Component{
     render(){
         const {Wizard} = DWJson.model;
         const {wizardProps, slide, index} = this.props;
-        const {stepIndex} = wizardProps.stateProps;
+        const {stepIndex, stepPassed} = wizardProps.stateProps;
+        if(!stepPassed['step' + index].passed){
+            return null;
+        }
         const backgroundClass = index === stepIndex ? "background-focus " : "background-passed ";
         const stepperClass = "text-overflow " +
                             "cursor-pointer " +

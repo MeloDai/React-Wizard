@@ -45,6 +45,10 @@
     color: #000000;
 }
 
+.background-passed:hover{
+    background: #666666;
+}
+
 .primary-btn{
     background-color: #757575!important;
     color: #ffffff!important;
@@ -60,4 +64,9 @@
 
 .cancel-btn:hover{
     background-color: #d5d5d5!important;
+}
+
+.md-wizard-step-container-top,
+.md-wizard-step-container-left{
+    background-color: #333333;
 }

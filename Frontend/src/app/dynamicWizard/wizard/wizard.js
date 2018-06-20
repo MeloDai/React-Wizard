@@ -11,12 +11,14 @@ export default class Wizard extends Component{
         super(props);
         this.state = {
             finished:0,
-            stepIndex:0
+            stepIndex:0,
+            YAMLError:false
         };
     }
 
     componentWillMount(){
-        const YAMLJson = DWJson.staticFun.init.YAMLFile.get();
+        const {init} = DWJson.staticFun.wizard;
+        const YAMLJson = init.YAMLFile.get();
         try{
             if(YAMLJson){
                 YAMLJson.then((res)=>{
@@ -26,7 +28,8 @@ export default class Wizard extends Component{
                         setTimeout(()=>{
                             this.setState({
                                 finished:1,
-                                stepIndex:1
+                                stepIndex:1,
+                                stepPassed:init.stepPassed(res.Wizard.slides)
                             });
                         }, 1000);
                     }
@@ -38,8 +41,11 @@ export default class Wizard extends Component{
     }
 
     goToStep(stepNum){
+        const {stepPassed} = this.state;
+        stepPassed['step' + stepNum].passed = true;
         this.setState({
-            stepIndex:stepNum
+            stepIndex:stepNum,
+            stepPassed:stepPassed
         });
     }
 
@@ -48,12 +54,13 @@ export default class Wizard extends Component{
     }
 
     render(){
-        const {finished, stepIndex} = this.state;
+        const {finished, stepIndex, stepPassed} = this.state;
         const {Wizard} = DWJson.model;
 
         const wizardProps = {
             stateProps:{
-                stepIndex:stepIndex
+                stepIndex:stepIndex,
+                stepPassed:stepPassed
             }
         };
 
