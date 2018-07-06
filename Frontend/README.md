@@ -48,8 +48,8 @@ Wizard:{
 You can configure the apply function in "src/app/composeBtn/composeBtn.js"
 
 ## Usage
-clone or download
-cd Frontend
-npm install
-npm run buildAll
-npm start
+		clone or download
+		cd Frontend
+		npm install
+		npm run buildAll
+		npm start
