@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import DWJson from "../../../../staticJs/setting";
 
-export default class WizardBodyName extends Component{
+export default class WizardBodyTitle extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -18,7 +18,7 @@ export default class WizardBodyName extends Component{
             <div
                 className='md-wizard-body-name text-overflow'
             >
-                {slides[stepIndex - 1].name}
+                {slides[stepIndex - 1].title}
             </div>
         );
     }

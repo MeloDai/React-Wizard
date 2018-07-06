@@ -18,23 +18,14 @@ export default class Wizard extends Component{
 
     componentWillMount(){
         const {init} = DWJson.staticFun.wizard;
-        const YAMLJson = init.YAMLFile.get();
         try{
-            if(YAMLJson){
-                YAMLJson.then((res)=>{
-                    console.log(res);
-                    if(res.Wizard){
-                        DWJson.model.Wizard = res.Wizard;
-                        setTimeout(()=>{
-                            this.setState({
-                                finished:1,
-                                stepIndex:1,
-                                stepPassed:init.stepPassed(res.Wizard.slides)
-                            });
-                        }, 600);
-                    }
-                })
-            }
+            setTimeout(()=>{
+                this.setState({
+                    finished:1,
+                    stepIndex:1,
+                    stepPassed:init.stepPassed(DWJson.model.Wizard.slides)
+                });
+            }, 600);
         }catch (e) {
             console.log(e);
         }

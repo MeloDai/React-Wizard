@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import WizardBodyName from "../header/name/name";
 import WizardBodyContent from "../content/content";
 import DWJson from "../../../staticJs/setting";
+import WizardBodyTitle from "../header/title/title";
 
 export default class WizardBodyContainer extends Component{
     constructor(props) {
@@ -19,7 +19,7 @@ export default class WizardBodyContainer extends Component{
             <div
                 className={wizardBodyContainerClass}
             >
-                <WizardBodyName
+                <WizardBodyTitle
                     wizardProps={wizardProps}
                 />
                 <WizardBodyContent

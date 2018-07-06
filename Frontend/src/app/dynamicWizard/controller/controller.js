@@ -11,6 +11,15 @@ export default class WizardController extends Component{
         };
     }
 
+    apply(){
+        console.log("wizard apply");
+        /*
+        const {fun} = DWJson.model;
+        fun.setDisplay(false);//this is let wizard disappear
+         */
+        return null;
+    }
+
     render(){
         const {wizardProps} = this.props;
         const {stateProps} = wizardProps;
@@ -55,6 +64,7 @@ export default class WizardController extends Component{
                             <Button
                                 variant="contained"
                                 className="margin-left-15 primary-btn"
+                                onClick={this.apply.bind(this)}
                             >
                                 Apply
                             </Button>
